@@ -1,4 +1,4 @@
-import { MoralisProvider } from 'react-moralis';
+// import { MoralisProvider } from 'react-moralis';
 import './App.css';
 import './components/Header';
 import { Header } from './components/Header';
