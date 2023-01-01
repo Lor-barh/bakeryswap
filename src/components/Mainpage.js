@@ -12,40 +12,42 @@ import ETHLogo from '../img/ETH.png';
 
 export const Mainpage = () => {
   return (
-    <div>
-        <div className='main-page'>
+    <div className='main-page'>
         <Sidebar/>
 
         <div className='body-container'>
             <div className='card-menu'>
                 <div className='grid'></div>
 
+                <div className='emp' height='0'>
+                    <div className='inside-emp'></div>
+                </div>
+
                 <div className='heading'>
                     <h2 className='earning' style={{marginBottom : "20px"}}>Earning</h2>
                 </div>
 
-                <div className='sub-heading'>
-                    <ul className='sub-heading-list'>
-                        <li className='option-list'>
-                            <h4>Earn TAMA</h4>
+                
+                    <div className='sub-heading'>
+                        <div className='option-list'>
+                            <h4 className='sub-heading-list'>Earn TAMA</h4>
                             <img src={V2} alt='v2' className='tag' width='24'/>
-                        </li>
-                        <li className='option-list'>
-                            <h4>Earn Others</h4>
+                        </div>
+                        <div className='option-list'>
+                            <h4 className='sub-heading-list'>Earn Others</h4>
                             <img src={V2} alt='v2' className='tag'/>
-                        </li>
-                        <li className='option-list'>
-                            <h4>NFT</h4>
-                        </li>
-                        <li className='option-list'>
-                            <h4>V1</h4>
+                        </div>
+                        <div className='option-list'>
+                            <h4 className='sub-heading-list'>NFT</h4>
+                        </div>
+                        <div className='option-list'>
+                            <h4 className='sub-heading-list'>V1</h4>
                             <img src={Ended} alt='v2' className='tag' width='24' height='20'/>
-                        </li>
-                        <li className='option-list'>
-                            <h4>Ended</h4>
-                        </li>
-                    </ul>
-                </div>
+                        </div>
+                        <div className='option-list'>
+                            <h4 className='sub-heading-list'>Ended</h4>
+                        </div>
+                    </div>
 
                 <div className='harvest-stake'>
                     <div className='harvest-bar'>
@@ -193,7 +195,6 @@ export const Mainpage = () => {
 
                 </div>
             </div>
-        </div>
         </div>
     </div>
   )

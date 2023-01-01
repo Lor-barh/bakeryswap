@@ -11,12 +11,9 @@ export const Header = () => {
 
 
   return (
-    <div>
-      
-     
-       <header className='header'>
-
-       <div className='header-bar'>
+    <div className='header'>
+      <div className='header-bar'>
+       <div className='header-inner' style={{alignItems : "center"}}>
         
         <div className='leftside-icons'>
           <div className='menu-bar'>
@@ -63,12 +60,9 @@ export const Header = () => {
         </div>
         </div>
         </div>
-        
-
         </div>
-      </header>
-      
-
-    </div>
+        </div>
+  </div>
+    
   )
 }

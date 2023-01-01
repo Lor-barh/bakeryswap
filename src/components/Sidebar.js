@@ -12,7 +12,6 @@ import Contact from '../img/contact.svg';
 
 export const Sidebar = () => {
   return (
-    <div>
         <div className='sidebar'>
             <nav className='navbar'>
                 <a href='#' className='home-link link-icon'>
@@ -52,6 +51,5 @@ export const Sidebar = () => {
                 </div>
             </nav>
         </div>
-    </div>
-  )
+    )
 }

@@ -1,6 +1,7 @@
 .header {
     width: 100%;
     display: flex;
+    justify-content: space-between;
 
 }
 
@@ -13,8 +14,16 @@
     z-index: 100;
     margin: 0;
     width: 100%;
-    padding: 0.5rem;
     box-shadow: rgb(171 133 115 / 16%) 0 2px 10px;
+}
+
+.header-inner{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    min-width: 0;
+    justify-content: space-between;
 }
 
 .leftside-icons{
@@ -149,4 +158,25 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+}
+
+@media(max-width : 960px){
+    .leftside-icons{
+        -webkit-box-align: center;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media(max-width : 500px){
+
+    .header-bar{
+    width: calc(100%);
+    position: relative;
+    justify-content: space-between;
+    }
+
+    .wording-logo{
+        display: none;
+    }
 }
