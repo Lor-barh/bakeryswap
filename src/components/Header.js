@@ -42,13 +42,8 @@ export const Header = () => {
 
               <div className='connect' style={{pointerEvents : "auto"}}>
                 <p className='hyphen' style={{flexShrink : "0", fontFamily : "Inter, sans-serif",}}> - </p>
-                
-                
+                 
                 <Connectwallet/>
-
-                {/* <button className='connect-btn'>
-                  <p className='connect-wallet'>Connect Wallet</p>
-                  </button> */}
               </div>
 
               <div className='settings'>

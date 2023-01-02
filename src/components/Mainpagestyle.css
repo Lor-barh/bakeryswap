@@ -349,10 +349,15 @@
         -webkit-box-pack: center;
         justify-content: center;
     }
+
+    .body-container{
+        width: 100%;
+    }
 }
 
 @media(max-width : 600px){
     .option-list{
         margin-right: 16px;
+        margin-top: 15px;
     }
 }

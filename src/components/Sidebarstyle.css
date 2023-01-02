@@ -73,3 +73,21 @@
 .contact-link{
     cursor: pointer;
 }
+
+@media(max-width: 960px){
+    .sidebar{
+    width: 0;
+    position: absolute;
+    z-index: 99;
+    }
+}
+
+@media(max-width: 600px){
+    .navbar{
+        overflow-x: auto;
+    }
+
+    .img-link{
+        margin-left: 0;
+    }
+}

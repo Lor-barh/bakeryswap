@@ -6,7 +6,7 @@ import Ended from '../img/ended.png';
 import logo from '../img/logo_white.b1858a79.svg'
 import Closed from '../img/icon_close.png';
 import { FaStar } from 'react-icons/fa';
-import Tamalogo from '../img/tama_logo.jpeg';
+import ImptLogo from '../img/logo.png';
 import USDTLogo from '../img/USDT.webp';
 import ETHLogo from '../img/ETH.png';
 
@@ -30,7 +30,7 @@ export const Mainpage = () => {
                 
                     <div className='sub-heading'>
                         <div className='option-list'>
-                            <h4 className='sub-heading-list'>Earn TAMA</h4>
+                            <h4 className='sub-heading-list'>Earn IMPT</h4>
                             <img src={V2} alt='v2' className='tag' width='24'/>
                         </div>
                         <div className='option-list'>
@@ -70,7 +70,7 @@ export const Mainpage = () => {
                     </div>
 
                     <div className='tama-logo'>
-                        <img src={Tamalogo} alt='TAMA Logo' style={{
+                        <img src={ImptLogo} alt='IMPT Logo' style={{
                             height : "54px",
                             marginBottom : "0",
                             marginTop : "0",
@@ -78,20 +78,20 @@ export const Mainpage = () => {
                     </div>
 
                     <div className='token-heading'>
-                        <h2 className='token-name'>TAMA</h2>
+                        <h2 className='token-name'>IMPT</h2>
                     </div>
 
                     <div className='token'>
                         <div className='token-option'>Deposit</div>
                         <div className='tama-token'>
-                        <div style={{fontWeight : "600"}}>TAMA</div>
+                        <div style={{fontWeight : "600"}}>IMPT</div>
                         </div>
                     </div>
 
                     <div className='token'>
                     <div className='token-option'>Earn</div>
                     <div className='tama-token'>
-                    <div style={{fontWeight : "600"}}>TAMA</div>
+                    <div style={{fontWeight : "600"}}>IMPT</div>
                     </div>
                     </div>
 
@@ -121,7 +121,7 @@ export const Mainpage = () => {
                     </div>
 
                     <div className='token-heading'>
-                        <h2 className='token-name'>USDT TO TAMA</h2>
+                        <h2 className='token-name'>USDT TO IMPT</h2>
                     </div>
 
                     <div className='token'>
@@ -134,7 +134,7 @@ export const Mainpage = () => {
                     <div className='token'>
                     <div className='token-option'>Earn</div>
                     <div className='tama-token'>
-                    <div style={{fontWeight : "600"}}>TAMA</div>
+                    <div style={{fontWeight : "600"}}>IMPT</div>
                     </div>
                     </div>
 
@@ -164,7 +164,7 @@ export const Mainpage = () => {
                     </div>
 
                     <div className='token-heading'>
-                        <h2 className='token-name'>ETH TO TAMA</h2>
+                        <h2 className='token-name'>ETH TO IMPT</h2>
                     </div>
 
                     <div className='token'>
@@ -177,7 +177,7 @@ export const Mainpage = () => {
                     <div className='token'>
                     <div className='token-option'>Earn</div>
                     <div className='tama-token'>
-                    <div style={{fontWeight : "600"}}>TAMA</div>
+                    <div style={{fontWeight : "600"}}>IMPT</div>
                     </div>
                     </div>
 
