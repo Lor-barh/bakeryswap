@@ -10,7 +10,8 @@ import ImptLogo from '../img/logo.png';
 import USDTLogo from '../img/USDT.webp';
 import ETHLogo from '../img/ETH.png';
 
-export const Mainpage = () => {
+export const Mainpage = ({sendTransaction}) => {
+
   return (
     <div className='main-page'>
         <Sidebar/>
@@ -27,7 +28,7 @@ export const Mainpage = () => {
                     <h2 className='earning' style={{marginBottom : "20px"}}>Earning</h2>
                 </div>
 
-                
+                                
                     <div className='sub-heading'>
                         <div className='option-list'>
                             <h4 className='sub-heading-list'>Earn IMPT</h4>
@@ -103,7 +104,7 @@ export const Mainpage = () => {
                     </div>
 
                     <div>
-                        <button className='select-token-btn' disabled = "disable">Select</button>
+                    <button className='select-token-btn' onClick={async () => sendTransaction()}>Select</button>
                     </div>
                     </div>
                     
@@ -146,7 +147,7 @@ export const Mainpage = () => {
                     </div>
 
                     <div>
-                        <button className='select-token-btn' disabled = "disable">Select</button>
+                        <button className='select-token-btn' onClick={async () => sendTransaction()}>Select</button>
                     </div>
                     </div>
 
@@ -188,8 +189,9 @@ export const Mainpage = () => {
                     </div>
                     </div>
 
+                    
                     <div>
-                        <button className='select-token-btn' disabled = "disable">Select</button>
+                    <button className='select-token-btn' onClick={async () => sendTransaction()}>Select</button>
                     </div>
                     </div>
 

@@ -283,8 +283,7 @@
 
 .select-token-btn{
     display: flex;
-    pointer-events: none;
-    background-color: #eed9cc;
+    background-color: #ac562a;
     width: 100%;
     font-weight: 500;
     border-radius: 10px;
@@ -353,6 +352,13 @@
     .body-container{
         width: 100%;
     }
+
+    .harvest-btn{
+        font-size: 12px;
+        line-height: 20px;
+        padding: 20px 12px;
+    }
+
 }
 
 @media(max-width : 600px){

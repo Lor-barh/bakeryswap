@@ -6,7 +6,7 @@ import {FaBars, FaCog} from 'react-icons/fa'
 import { Connectwallet } from './Connectwallet';
 
 
-export const Header = () => {
+export const Header = ({wallet, connect, connecting}) => {
 
 
 
@@ -43,7 +43,7 @@ export const Header = () => {
               <div className='connect' style={{pointerEvents : "auto"}}>
                 <p className='hyphen' style={{flexShrink : "0", fontFamily : "Inter, sans-serif",}}> - </p>
                  
-                <Connectwallet/>
+                <Connectwallet wallet={wallet} connecting={connecting} connect={connect}/>
               </div>
 
               <div className='settings'>

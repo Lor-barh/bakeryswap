@@ -104,15 +104,20 @@
     font-size: 16px;
     flex-flow: row nowrap;
     width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    appearance: none;
     align-items: center;
     padding: 0.5rem;
     background-color: #ac562a;
     border: 1px solid rgba(172,86,42,.44);
     border-radius: 10px;
+    -webkit-box-pack: center;
     font-weight: 500;
-    text-decoration: none;
     text-align: center;
     outline: 0;
+    text-decoration: none;
     display: flex;
     cursor: pointer;
     z-index: 1;
@@ -175,6 +180,11 @@
 
     .hyphen{
         display: none;
+    }
+
+    .connect-wallet{
+        font-size: 0.8rem;
+        margin: 0 0.3rem 0 0.5rem;
     }
 }
 
