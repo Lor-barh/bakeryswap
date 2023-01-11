@@ -44,6 +44,12 @@ const web3onboard = init({
             token : 'ETH',
             label : 'Ethereum Mainnet',
             rpcUrl : MAINNET_RPC_URL
+        },
+        {
+            id : '0x0',
+            token : 'IMPT',
+            label : 'IMPT',
+            rpcUrl : MAINNET_RPC_URL
         }
     ],
     appMetadata: {
